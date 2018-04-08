@@ -21,7 +21,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    routePrefix: 'http://localhost:8000/'
+
   };
 
   if (environment === 'development') {
@@ -44,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.routePrefix = '/'
   }
 
   return ENV;
