@@ -1,6 +1,13 @@
 List of games
 <ul>
 {{#each games as |game| }}
-  <li><h4 class="red">{{game.game_info.name}}</h4></li>
+  <li>
+    <div>
+      <h4 class="red">{{game.game_info.name}}</h4>
+      {{#each-in game.hype_map as |tag counter|}}
+        <p class="link pointer dim">{{tag}} <span class="b">{{counter}}</span></p>
+      {{/each-in}}
+    </div>
+  </li>
 {{/each}}
 </ul>

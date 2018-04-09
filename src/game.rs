@@ -1,8 +1,7 @@
 pub mod game {
     use db::redis::RedisConnection;
     use redis::Commands;
-    use redis::Iter;
-    use rocket_contrib::{Json, Value};
+    use rocket_contrib::Json;
     use serde_json;
     use std::collections::HashMap;
     use std::iter::FromIterator;

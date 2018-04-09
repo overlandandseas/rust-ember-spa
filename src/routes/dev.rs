@@ -3,12 +3,11 @@ use super::CORS;
 use super::db::redis::RedisConnection;
 use super::game::game::{get_games_vec, GamesList};
 use r2d2;
-use redis::Commands;
 use std::ops::Deref;
 
 use r2d2_redis::RedisConnectionManager;
 use rocket::Route;
-use rocket_contrib::{Json, Value};
+use rocket_contrib::Json;
 
 impl Deref for RedisConnection {
     type Target = r2d2::PooledConnection<RedisConnectionManager>;
