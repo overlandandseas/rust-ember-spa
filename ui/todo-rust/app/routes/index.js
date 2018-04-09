@@ -2,8 +2,6 @@ import Ember from 'ember';
 import ENV from 'todo-rust/config/environment';
 
 export default Ember.Route.extend({
-
-
   init() {
     console.log("Enviroment", ENV.routePrefix);
   },
@@ -18,9 +16,7 @@ export default Ember.Route.extend({
       },
     }).then(resp => resp.json())
     .then(data => {
-      controller.set('games', JSON.parse(data).results.games);
+      controller.set('games', data.games);
     })
-
-
   }
 });
